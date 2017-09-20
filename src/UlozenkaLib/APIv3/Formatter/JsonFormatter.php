@@ -74,6 +74,7 @@ class JsonFormatter implements IFormatter
     {
         $root = [];
 
+        $this->createAttributeIfHasValue($root, ConsignmentAttr::SENDER_NAME, $consignmentRequest->getSenderName());
         $this->createAttributeIfHasValue($root, ConsignmentAttr::ORDER_NUMBER, $consignmentRequest->getOrderNumber());
         $this->createAttributeIfHasValue($root, ConsignmentAttr::PARTNER_CONSIGNMENT_ID, $consignmentRequest->getPartnerConsignmentId());
         $this->createAttributeIfHasValue($root, ConsignmentAttr::TRANSPORT_SERVICE_ID, $consignmentRequest->getTransportServiceId());

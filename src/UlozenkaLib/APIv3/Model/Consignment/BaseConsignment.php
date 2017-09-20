@@ -9,6 +9,9 @@ namespace UlozenkaLib\APIv3\Model\Consignment;
 abstract class BaseConsignment
 {
 
+    /** @var string */
+    protected $senderName;
+
     /** @var Receiver */
     protected $receiver;
 
@@ -59,6 +62,15 @@ abstract class BaseConsignment
 
     /** @var string */
     protected $note;
+
+    /**
+     *
+     * @return string
+     */
+    public function getSenderName()
+    {
+        return $this->senderName;
+    }
 
     /**
      *
@@ -211,6 +223,17 @@ abstract class BaseConsignment
     public function getNote()
     {
         return $this->note;
+    }
+
+    /**
+     *
+     * @param string $senderName
+     * @return BaseConsignment
+     */
+    public function setSenderName($senderName)
+    {
+        $this->senderName = $senderName;
+        return $this;
     }
 
     /**

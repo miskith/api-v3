@@ -11,6 +11,7 @@ class ConsignmentAttr
 
     const ID = 'id';
     const SHOP_ID = 'shop_id';
+    const SENDER_NAME = 'sender_name';
     const CUSTOMER_NAME = 'customer_name';
     const CUSTOMER_SURNAME = 'customer_surname';
     const COMPANY_NAME = 'company_name';
